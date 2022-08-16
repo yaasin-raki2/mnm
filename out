@@ -1,0 +1,12 @@
+total 88
+-rw-r--r--   1 yerraqui  2019   358 Aug 16 12:30 HELP_ME.c
+-rw-r--r--   1 yerraqui  2019   385 Aug 16 12:16 Makefile
+-rw-r--r--   1 yerraqui  2019    15 Aug 15 15:17 in
+drwxr-xr-x  92 yerraqui  2019  3128 Aug 16 12:16 libft
+-rw-r--r--   1 yerraqui  2019  1376 Aug 16 14:01 main.c
+-rw-r--r--   1 yerraqui  2019  1160 Aug 15 14:47 main.o
+-rwxr-xr-x   1 yerraqui  2019  9120 Aug 16 12:16 minishell
+-rw-r--r--   1 yerraqui  2019   690 Aug 16 14:14 minishell.h
+-rw-r--r--   1 yerraqui  2019     0 Aug 16 14:22 out
+-rw-r--r--   1 yerraqui  2019   652 Aug 16 14:01 parse_chunk.c
+-rw-r--r--   1 yerraqui  2019   193 Aug 16 14:19 split_plus_plus.c
