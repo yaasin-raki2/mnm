@@ -24,3 +24,15 @@ void print_arr_list(t_list **arr)
         i++;
     }
 }
+
+void print_dd_arr(char **arr)
+{
+    int i;
+
+    i = 0;
+    while (arr[i])
+    {
+        printf("%s\n", arr[i]);
+        i++;
+    }
+}

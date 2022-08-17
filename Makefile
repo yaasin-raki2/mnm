@@ -1,6 +1,6 @@
 NAME = minishell
 
-SRCS = main.c HELP_ME. spilt_plus_plus.c
+SRCS = main.c HELP_ME.c split_plus_plus.c
 
 CC = gcc
 
@@ -13,8 +13,7 @@ INCLUDES = $(LIBFT)/.
 all:
 	@make -C $(LIBFT)
 	@make bonus -C $(LIBFT)
-	@$(CC) $(FLAGS) $(SRCS) -L $(LIBFT) -lft -lreadline -o $(NAME) -I $(INCLUDES)
-
+	@$(CC) $(FLAGS) $(SRCS) -L $(LIBFT) -lft -lreadline -o $(NAME) -I $(INCLUDES) -fsanitize=address
 clean:
 	@rm -rf $(NAME)
 	@make clean -C $(LIBFT)
