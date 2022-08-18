@@ -31,3 +31,6 @@ void    print_list(t_list *head);
 void    print_arr_list(t_list **arr);
 
 #endif //MINISHELL_MINISHELL_H
+
+// TODO: flag first,then remove quotes, then after building the linked list, you can expand
+// TODO: remove quotes

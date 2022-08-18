@@ -97,14 +97,8 @@ int	main()
 	l = (t_line *)malloc(sizeof(t_line));
 	while (1)
 	{
-		printf("$> ");
-		l->line = readline(NULL);
+		l->line = readline("$> ");
 		parse_line(l);
-//        int i = 0;
-//        while (l->arr[i])
-//        {
-//            ft_lstclear(&l->arr[i], &free);
-//        }
 	}
 	return (0);
 }
