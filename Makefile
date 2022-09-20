@@ -1,6 +1,6 @@
 NAME = minishell
 
-SRCS = main.c HELP_ME.c split_plus_plus.c
+SRCS = main.c HELP_ME.c split_plus_plus.c quotes/build.c quotes/expand.c quotes/flag.c quotes/remove_quotes.c here_doc/expand_if.c
 
 CC = gcc
 

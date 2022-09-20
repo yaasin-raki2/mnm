@@ -1,6 +1,6 @@
 #include "minishell.h"
 
- void print_list(t_list *head)
+void print_list(t_list *head)
 {
     char *str;
 

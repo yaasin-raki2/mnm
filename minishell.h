@@ -11,26 +11,41 @@
 
 typedef struct s_line
 {
-	char    *line;
-	char    *command;
-	char    *args;
-    char    **pipedout;
-    t_list  **arr;
-    char    ***chunks;
+	char *line;
+	char *command;
+	char *args;
+	char **pipedout;
+	t_list **arr;
+	char ***chunks;
+	char **env;
+	char *expanded_var;
+	char *temp;
+	char *here_doc;
 } t_line;
 
-void    parse_line(t_line *l);
-void    flag_in_quotes(t_line *l);
-void    init_arr_list(t_line *l);
-void    fillup_arr_list(t_line *l);
-void    parse_chunks(t_line *l, int x);
+void parse_line(t_line *l);
+void flag_in_quotes(t_line *l);
+void init_arr_list(t_line *l);
+void fillup_arr_list(t_line *l);
+void parse_chunks(t_line *l, int x);
 
-void    split_plus_plus(char *str, int x, t_line *l);
+void split_plus_plus(char *str, int x, t_line *l);
 
-void    print_list(t_list *head);
-void    print_arr_list(t_list **arr);
+void flag_in_quotes(t_line *l);
+void deflag_in_quotes(char *str);
+void remove_quotes(t_line *l, char quote_type);
 
-#endif //MINISHELL_MINISHELL_H
+void remove_one(t_line *l, int x);
+void build_it(t_line *l, int x);
+void expand_it(t_line *l);
 
-// TODO: flag first,then remove quotes, then after building the linked list, you can expand
-// TODO: remove quotes
+void expand_if(t_line *l);
+
+void print_list(t_list *head);
+void print_arr_list(t_list **arr);
+
+#endif // MINISHELL_MINISHELL_H
+
+// TODO: HD: Append to a string each line you recieve after parsing it.
+
+// TODO: HD: Handle here_doc nesting.

@@ -1,5 +1,7 @@
 #include "minishell.h"
 
+// TODO: Expand and remove quotes
+
 void split_plus_plus(char *str , int x, t_line *l)
 {
     int i;
@@ -22,7 +24,12 @@ void split_plus_plus(char *str , int x, t_line *l)
         s = i;
         if (str[i] == '<' || str[i] == '>')
         {
-            if (str[i + 1] && (str[i + 1] == '<' || str[i + 1] == '>'))
+            if (str[i + 1] && (str[i] == '<' && str[i + 1] == '<'))
+            {
+                temp = ft_substr(str, s, i - s + 2);
+                i++;
+            }
+            else if (str[i +1] && (str[i] == '>' && str[i + 1] == '>'))
             {
                 temp = ft_substr(str, s, i - s + 2);
                 i++;
